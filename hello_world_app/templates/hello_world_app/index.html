@@ -1,0 +1,19 @@
+<!-- hello_world_app/templates/hello_world_app/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World App</title>
+</head>
+<body>
+    <h1>Введіть ім'я:</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="name">
+        <button type="submit">Відправити</button>
+    </form>
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
